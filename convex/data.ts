@@ -54,9 +54,10 @@ export const createData = mutation({
 });
 
 export const deleteData = mutation({
-  args: { id: v.id("DataFile") },
+  args: { id: v.id("DataFile"), fileId: v.id("_storage") },
   handler: async (ctx, args) => {
     await ctx.db.delete(args.id);
+    await ctx.storage.delete(args.fileId);
   },
 });
 

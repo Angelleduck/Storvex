@@ -43,6 +43,6 @@ export const columns = [
   },
   {
     header: "Delete",
-    cell: ({ row }: any) => <DeleteButton row={row.original._id} />,
+    cell: ({ row }: any) => <DeleteButton row={row.original} />,
   },
 ];

@@ -60,8 +60,8 @@ export function DeleteModal({
             variant="destructive"
             asChild
             onClick={() => {
-              deleteData({ id: row });
-              toast.success("deleted successfully");
+              deleteData({ id: row._id, fileId: row.fileId });
+              toast.success("successfully deleted");
             }}
           >
             <AlertDialogAction>Continue</AlertDialogAction>
